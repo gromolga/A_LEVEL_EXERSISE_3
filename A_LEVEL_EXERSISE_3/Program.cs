@@ -6,7 +6,8 @@ namespace A_LEVEL_EXERSISE_3
     {
         static void Main(string[] args)
         {
-           
+            Starter starter = new Starter();
+            starter.Run();
         }
     }
 }
