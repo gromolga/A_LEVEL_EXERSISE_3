@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace A_LEVEL_EXERSISE_3
 {
     class Starter
     {
+        Logger logger = Logger.getInstance();
         public void Run()
         {
             Actions actions = new Actions();
@@ -34,6 +36,8 @@ namespace A_LEVEL_EXERSISE_3
                     Logger.getInstance().Error($"Action failed by reason: {exception.StackTrace}");
                 }
             }
+            string output = logger.GetAllErrors();
+            File.WriteAllText("OUTPUT.TXT", output);
         }
     }
 }
