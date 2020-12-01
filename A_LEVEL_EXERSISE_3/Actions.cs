@@ -6,19 +6,19 @@ namespace A_LEVEL_EXERSISE_3
 {
     public class Actions
     {
-        Logger logger = Logger.getInstance();
+        private readonly Logger logger = Logger.getInstance();
         public void Info()
         {
-            logger.Info("Start method: Info");
+            logger.Info($"Start method: {nameof(Info)}");
         }
 
         public void Warning()
         {
-            logger.Warning("Skipped logic in method: Warning");
+            logger.Info($"Start method: {nameof(Warning)}");
         }
         public void Error()
         {
-            logger.Error("I broke a toilet");
+            throw new Exception("I broke a toilet");
         }
     }
 }

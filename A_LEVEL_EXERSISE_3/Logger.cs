@@ -23,17 +23,17 @@ namespace A_LEVEL_EXERSISE_3
 
         public void Info(string message)
         {
-            errors.Add("Info: " + message);
+            errors.Add($"Info: {message}");
             Console.WriteLine($"Info: {message}");
         }
         public void Warning(string message)
         {
-            errors.Add("Warning: " + message);
+            errors.Add($"Warning: {message}");
             Console.WriteLine($"Warning: {message}");
         }
         public void Error(string message)
         {
-            errors.Add("Error: " + message);
+            errors.Add($"Error: {message}");
             Console.WriteLine($"Error: {message}");
         }
         public string GetAllErrors()

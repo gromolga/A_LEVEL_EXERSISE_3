@@ -7,18 +7,17 @@ namespace A_LEVEL_EXERSISE_3
 {
     public class Starter
     {
-        Logger logger = Logger.getInstance();
+        private readonly Logger logger = Logger.getInstance();
         public void Run()
         {
             Actions actions = new Actions();
-            for (int i = 0; i < 100; i++)
-            {
-                var rand = new Random();
-                var result = rand.Next(1, 3);
+            var rand = new Random();
 
+            for (var i = 0; i < 100; i++)
+            {
                 try
                 {
-                    switch (result)
+                    switch (rand.Next(1, 3))
                     {
                         case 1:
                             actions.Info();
@@ -33,10 +32,10 @@ namespace A_LEVEL_EXERSISE_3
                 }
                 catch (Exception exception)
                 {
-                    Logger.getInstance().Error($"Action failed by reason: {exception.StackTrace}");
+                    logger.Error($"Action failed by reason: {exception.StackTrace}");
                 }
             }
-            string output = logger.GetAllErrors();
+            var output = logger.GetAllErrors();
             File.WriteAllText("OUTPUT.TXT", output);
         }
     }
