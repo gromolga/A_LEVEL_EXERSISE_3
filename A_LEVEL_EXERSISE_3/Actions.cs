@@ -4,7 +4,7 @@ using System.Text;
 
 namespace A_LEVEL_EXERSISE_3
 {
-    class Actions
+    public class Actions
     {
         Logger logger = Logger.getInstance();
         public void Info()

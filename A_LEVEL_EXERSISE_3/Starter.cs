@@ -5,7 +5,7 @@ using System.Text;
 
 namespace A_LEVEL_EXERSISE_3
 {
-    class Starter
+    public class Starter
     {
         Logger logger = Logger.getInstance();
         public void Run()
